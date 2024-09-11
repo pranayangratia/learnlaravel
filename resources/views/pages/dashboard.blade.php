@@ -50,6 +50,15 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Generate list</h5>
+                                                <p class="card-text">Get your student list from different courses.</p>
+                                                <a href="{{route('downloadpdf')}}" class="btn btn-primary">Go to Download</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                     @elseif (Auth::user()->role == 'student')
                                     <div class="col-md-4 mb-3">
                                         <div class="card">

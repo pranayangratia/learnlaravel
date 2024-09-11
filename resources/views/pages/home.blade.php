@@ -26,5 +26,7 @@
         <x-view-enrolled-courses />
     @elseif (request()->routeIs('attendancerecord','showAttendanceForm'))
         <x-attendance-record />
+    @elseif (request()->routeIs('downloadpdf'))
+        <x-download-pdf />
     @endif
 @endsection

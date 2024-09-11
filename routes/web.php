@@ -10,6 +10,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AttendanceController;
+use App\Http\Controllers\PdfController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,6 +62,10 @@ Route::get('/manageEnrollments', [UserController::class, 'manageEnrollments'])->
 Route::get('dashboard/profile/edit', [UserController::class, 'edit'])->name('profile-edit');
 
 Route::get('dashboard/study', [UserController::class, 'gotodesk'])->name('gotodesk');
+
+Route::get('dashboard/pdfdownload', [UserController::class, 'downloadpdf'])->name('downloadpdf');
+
+Route::get('dashboard/{course}/generatepdf', [PdfController::class, 'generatepdf'])->name('generatepdf')->middleware('auth');
 
 Route::get('dashboard/attendance', [AttendanceController::class, 'attendancerecord'])->name('attendancerecord')->middleware('auth');
 

@@ -97,4 +97,8 @@ class UserController extends Controller
         return view('pages.home');
     }
 
+    public function downloadpdf () {
+        return view('pages.home');
+    }
+
 }
